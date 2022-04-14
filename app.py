@@ -1,9 +1,15 @@
-from flask import Flask
 import sys
+
+from flask import Flask, jsonify
 
 app = Flask(__name__)
 
+
 # write your code here
+
+@app.route('/event/today')
+def today_event():
+    return jsonify({"data": "There are no events for today!"})
 
 
 # do not change the way you run the program
